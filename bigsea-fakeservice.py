@@ -9,7 +9,7 @@ app = Flask(__name__)
 def authorize_application_execution():
      data = request.get_json()
 
-     if data['username'] != "" and data['password'] != "":
+     if data['bigsea_username'] != "" and data['bigsea_password'] != "":
          return 'Access allowed for the application %.', 200
      else:
          return 'Access denied for the application %.', 401
