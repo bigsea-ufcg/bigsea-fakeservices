@@ -12,7 +12,7 @@ cluster_size = conf.getint("defaults", "cluster_size")
 def authorize_application_execution():
     return '{"success":true}', 200
 
-@app.route('/optimizer/get_cluster_size', methods=['POST'])
+@app.route('/optimizer/get_cluster_size', methods=['GET'])
 def initial_cluster_size():
     result = {"cluster_size":cluster_size}
     return jsonify(result), 200
